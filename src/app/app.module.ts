@@ -7,13 +7,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
+
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { AuthService } from './auth.service';
 import { MaterialModule } from '@angular/material';
+
 import { TaskListComponent } from './task-list/task-list.component';
+
 import { TaskFormComponent } from './task-list/task-form/task-form.component';
+
+
 
 
 
@@ -29,7 +34,8 @@ export function authHttpFactory(http: Http, options: RequestOptions) {
 }
 
 @NgModule({
-  declarations: [
+  
+    declarations: [
 
     AppComponent,
 
@@ -55,7 +61,7 @@ export function authHttpFactory(http: Http, options: RequestOptions) {
 
   providers: [
     AuthService,
-    TaskListService, // adds new service
+    TaskListService, 
       {
         provide: AuthHttp,
         useFactory: authHttpFactory, // defines how to provide AuthHttp
